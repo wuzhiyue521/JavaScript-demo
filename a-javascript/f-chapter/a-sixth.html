@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>JS-Web-API 讲解</title>
+</head>
+<style>
+  .sel {
+    background-color: aliceblue;
+    margin: 0 0 30px 0;
+    border: 1px solid #333
+  }
+  #btn1, #btn2 {
+    cursor: pointer;
+  }
+  a {
+    text-decoration: none;
+    outline: none;
+    color: #333;
+    display: inline-block;
+    padding: 10px 0;
+    border-bottom: 1px solid red;
+    margin: 5px 0;
+  }
+</style>
+<body>
+  <p>JS-Web-API:</p>
+  <div class="sel">
+    <p>第一个 div: 事件绑定</p>
+    <button id="btn1">普通的事件绑定 -- 按钮</button>
+    <p>
+      <a id="btn2" href="">通用事件绑定的 -- 封装</a>
+      <br>
+      <a href="javascript:void(0)">阻止 a 标签的跳转与刷新 --- void(0)的含义: 该操作符指定要计算一个表达式但是不返回值; 你以使用 void 操作符指定超级链接。表达式会被计算但是不会当前文档处装入任何内容。所以，javascript:void(0) 仅仅表示一个死链接</a>
+      <br>
+      <a href="javascript:">阻止 a 标签的跳转与刷新</a>
+    </p>
+  </div>
+
+  <div class="sel" id="shel">
+    <p>第二个 div: 事件冒泡</p>
+    <div id="div1">
+      <div>
+        <p id="p1">激活</p>
+        <p id="p2">取消1</p>
+        <p id="p3">取消2</p>
+        <p id="p4">取消3</p>
+      </div>
+      <div id="div2">
+        <p id="p5">取消10</p>
+        <p id="p6">取消20</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="sel">
+    <p>第三个 div : 代理</p>
+    <div id="div3">
+      <a href="javascript:void(0)">事件代理1</a>
+      <br>
+      <a href="javascript:void(0)">事件代理2</a>
+      <br>
+      <a href="javascript:void(0)">事件代理3</a>
+      <br>
+      <a href="javascript:void(0)">事件代理4</a>
+    </div>
+  </div>
+  <div class="sel">
+    <p>第三个 div : 完善代理</p>
+    <div id="div4">
+      <a href="javascript:void(0)">完善事件代理1</a>
+      <br>
+      <a href="javascript:void(0)">完善事件代理2</a>
+      <br>
+      <a href="javascript:void(0)">完善事件代理3</a>
+      <br>
+      <a href="javascript:void(0)">完善事件代理4</a>
+      <!-- <p id="noDai">完善事件代理1(不适用代理)</p> -->
+    </div>
+  </div>
+  <div class="sel">
+    <p> 第三个 div : 完善代理(不适用代理)</p>
+    <div id="div5">
+      <p id="noDai">完善事件代理1(不适用代理)</p>
+    </div>
+  </div>
+</body>
+<script src="./b-sixth.js"></script>
+<script src="./c-sixth.js"></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+<script src=""></script>
+</html>
